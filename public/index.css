@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  text-transform: uppercase;
+}
+
+button {
+  padding: 1rem 2rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+}
+
+table {
+  border: 1px solid #ccc;
+  table-layout: fixed; /* Keep table layout fixed to make sure it respects the width of the container */
+  width: 100%; /* Make the table take up full available width */
+}
+
+th,
+td {
+  padding: 1rem; /* Add some padding for better readability */
+  white-space: normal; /* Allow text to wrap to the next line if it's too long */
+  word-wrap: break-word; /* Break words if necessary to fit the cell */
+  text-align: left; /* Align text to the left */
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  form {
+    width: 50%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .table-container {
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 3rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  form {
+    width: 40%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .table-container {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    padding: 4rem;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  form {
+    width: 30%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .table-container {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    padding: 5rem;
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+
+  form {
+    width: 20%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .table-container {
+    max-width: 40%;
+  }
+}
+

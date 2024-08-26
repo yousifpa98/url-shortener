@@ -14,6 +14,9 @@ app.get("/", async (req, res) => {
   res.render("index", { shortUrls: shortUrls });
 });
 
+// Serve static files from the "public" directory
+app.use(express.static("public"));
+
 app.post("/shortUrls", async (req, res) => {
   await ShortUrl.create({ full: req.body.fullUrl });
   res.redirect("/");
